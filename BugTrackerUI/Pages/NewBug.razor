@@ -3,10 +3,10 @@
 <EditForm Model="AddBug">
     <InputText @bind-value="@AddBug.Title" placeholder="Enter Title"></InputText>
     <InputText @bind-value="@AddBug.Description" placeholder="Enter Description"></InputText>
-    <InputNumber @bind-value="@AddBug.Priority" placeholder="Enter Priority"></InputNumber>
+    <InputNumber @bind-value="@AddBug.Priority" placeholder="Enter Priority" TValue="int"></InputNumber>
     <button type="submit">Add Bug</button>
 </EditForm>
 @code {
-    public Bug AddBug = new Bug();
+    public Bug AddBug { get; set; } = new Bug();
     
 }
